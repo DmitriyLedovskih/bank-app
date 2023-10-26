@@ -1,7 +1,7 @@
 import { NotFound } from "@/components/screens/not-found/not-found.component";
 import { ROUTES } from "./routes.data";
 import { Layout } from "@/components/layout/layout.component";
-import { $LD } from "../ldquery/ldquery.lib";
+import { $JS } from "../jsquery/jsquery.lib";
 
 export class Router {
   #router = ROUTES;
@@ -60,9 +60,9 @@ export class Router {
         children: component,
       }).render();
 
-      $LD('#app').append(this.#layout);
+      $JS('#app').append(this.#layout);
     } else {
-      $LD('#content').html('').append(component.render);
+      $JS('#content').html('').append(component);
     }
   }
 }

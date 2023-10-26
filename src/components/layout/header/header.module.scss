@@ -55,36 +55,6 @@
   .form {
     width: 100%;
     text-align: right;
-    .label {
-      position: relative;
-    }
-
-    .icon {
-      position: absolute;
-      left: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 18px;
-      pointer-events: none;
-    }
-
-    .input {
-      @include transition();
-      padding: 10px 10px 10px 35px;
-      font-size: 14px;
-      line-height: 16px;
-      border-radius: $radius;
-      min-height: 36px;
-      max-width: 215px;
-      width: 100%;
-      &:focus {
-        max-width: 315px;
-        background-color: $primary;
-        &::placeholder {
-          color: $white;
-        }
-      }
-    }
 
     @media screen and (max-width: 650px) {
       text-align: center;

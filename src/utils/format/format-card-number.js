@@ -1,0 +1,1 @@
+export const formatCardNumberWithDashes = (cardNumber) => cardNumber.replace(/(\d{4})(?=\d)/g, '$1-');

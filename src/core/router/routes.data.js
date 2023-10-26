@@ -12,7 +12,7 @@ export const ROUTES = [
     component: Auth,
   },
   {
-    path: '/',
+    path: '/about',
     component: About,
   },
 ];

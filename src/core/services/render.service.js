@@ -1,11 +1,10 @@
-import ChildComponent from "../component/child.component";
+import ChildComponent from "../../core/component/child.component";
 
 class RenderService {
   htmlToElement(html, components = [], styles) {
     const template = document.createElement('template');
     template.innerHTML = html.trim();
     const element = template.content.firstChild;
-
     if (styles) {
       this.#applyModuleStyles(styles, element);
     }

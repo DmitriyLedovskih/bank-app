@@ -1,7 +1,7 @@
 import renderService from "@/core/services/render.service";
 import styles from './layout.module.scss';
 import template from './layout.template.html';
-import { $LD } from "@/core/ldquery/ldquery.lib";
+import { $JS } from "@/core/jsquery/jsquery.lib";
 import { Header } from "./header/header.component";
 import ChildComponent from "@/core/component/child.component";
 
@@ -14,8 +14,8 @@ export class Layout extends ChildComponent {
 
   render() {
     this.element = renderService.htmlToElement(template, [], styles);
-    const mainElement = $LD(this.element).find('main');
-    const contentContainer = $LD(this.element).find('#content');
+    const mainElement = $JS(this.element).find('main');
+    const contentContainer = $JS(this.element).find('#content');
     contentContainer.append(this.children);
     mainElement.before(new Header().render()).append(contentContainer.element);
     return this.element;
